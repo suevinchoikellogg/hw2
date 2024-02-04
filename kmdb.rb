@@ -104,7 +104,7 @@ movie["rated"] = "PG-13"
 movie["studio_id"] = warner["id"]
 movie.save 
 
-puts movie.inspect 
+# puts movie.inspect 
 
 
 
@@ -116,7 +116,7 @@ studio = Studio.new
 studio["name"] = "Warner Bros." 
 studio.save 
 
-puts studio.inspect 
+# puts studio.inspect 
 
 
 
@@ -296,12 +296,17 @@ puts "Movies"
 puts "======"
 
 deliverable_movie = Movie.all.each
+deliverable_studio = Studio.all.each
+
 for movies in deliverable_movie
     title = movies["title"]
     year_released = movies["year_released"]
     rated = movies["rated"]
-    studio = movies["studio_id"]
+    # studio = movies["studio_id"]
+    for studios in deliverable_studio
+        studio = studios["name"]
     puts "#{title} #{year_released} #{rated} #{studio}"
+    end 
 end
 
 # Query the movies data and loop through the results to display the movies output.
@@ -320,6 +325,7 @@ for roles in deliverable_actor
     character = roles["character_name"]
     puts "#{title} #{actor} #{character}"
 end
+
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
