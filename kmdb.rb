@@ -300,7 +300,8 @@ for movies in deliverable_movie
     title = movies["title"]
     year_released = movies["year_released"]
     rated = movies["rated"]
-    puts "#{title} #{year_released} #{rated}"
+    studio = movies["studio_id"]
+    puts "#{title} #{year_released} #{rated} #{studio}"
 end
 
 # Query the movies data and loop through the results to display the movies output.
