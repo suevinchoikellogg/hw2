@@ -96,27 +96,27 @@ studio.save
 
 ### Table for Movie + Insert data  
 
-warner = Studio.find_by({"name" => "Warner Bros."})
+warner_bros = Studio.find_by({"name" => "Warner Bros."})
 
 movie = Movie.new 
 movie["title"] = "Batman Begins" 
 movie["year_released"] = "2005" 
 movie["rated"] = "PG-13" 
-movie["studio_id"] = warner["id"] 
+movie["studio_id"] = warner_bros["id"] 
 movie.save 
 
 movie = Movie.new 
 movie["title"] = "The Dark Knight" 
 movie["year_released"] = "2008" 
 movie["rated"] = "PG-13" 
-movie["studio_id"] = warner["id"]
+movie["studio_id"] = warner_bros["id"]
 movie.save 
 
 movie = Movie.new 
 movie["title"] = "The Dark Knight Rises" 
 movie["year_released"] = "2012" 
 movie["rated"] = "PG-13" 
-movie["studio_id"] = warner["id"]
+movie["studio_id"] = warner_bros["id"]
 movie.save 
 
 # puts movie.inspect 
